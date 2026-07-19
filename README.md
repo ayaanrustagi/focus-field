@@ -1,12 +1,11 @@
-# Focus Field — Site Blocker & Pomodoro
+# Focus Field — Block Distracted Browsing
 
-Indigo focus sessions + blocklist. Blocks via `declarativeNetRequest` while focus is active (or always-on).
+Block user-listed sites during Pomodoro focus (or always-on). Optional local webcam timelapse. No cloud.
 
-## Load
-`chrome://extensions` → **Load unpacked** → this folder.
+- **Site:** https://ayaanrustagi.github.io/focus-field/  
+- **Privacy:** https://ayaanrustagi.github.io/focus-field/privacy.html  
+- **Store listing copy:** [STORE_LISTING.md](./STORE_LISTING.md)  
+- **Version:** 1.1.1  
 
-## Features
-- Pomodoro focus / break timer
-- Host blocklist
-- Always-on blocking toggle
-- Soft blocked interstitial page
+## Load unpacked
+`chrome://extensions` → Developer mode → **Load unpacked** → this folder.

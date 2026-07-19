@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Focus Field · Timelapse</title>
+  <link rel="stylesheet" href="timelapse.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <p class="eyebrow">focus field · timelapse</p>
+      <h1 id="status-title">Ready</h1>
+      <p class="sub" id="status-sub">Waiting for a focus session…</p>
+    </header>
+
+    <div class="stage">
+      <video id="preview" autoplay playsinline muted></video>
+      <canvas id="snap" hidden></canvas>
+      <div class="stage-badge" id="frame-count">0 frames</div>
+    </div>
+
+    <div class="stats">
+      <div>
+        <span class="label">phase</span>
+        <strong id="phase">idle</strong>
+      </div>
+      <div>
+        <span class="label">timer</span>
+        <strong id="timer">--:--</strong>
+      </div>
+      <div>
+        <span class="label">interval</span>
+        <strong id="interval-label">2s</strong>
+      </div>
+    </div>
+
+    <p class="hint" id="hint">
+      Keep this window open while you focus. One webcam frame is saved every few seconds, then stitched into a short video when focus ends.
+    </p>
+
+    <div class="row">
+      <button type="button" class="btn solid" id="enable-cam">enable camera</button>
+      <button type="button" class="btn ghost" id="download" disabled>download webm</button>
+    </div>
+
+    <p class="error" id="error" hidden></p>
+    <video id="result" class="result" controls hidden></video>
+  </div>
+  <script src="timelapse.js"></script>
+</body>
+</html>

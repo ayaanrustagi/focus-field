@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Focus Field — Site Blocker & Pomodoro",
+  "name": "Focus Field — Block Distractions Browsing",
   "short_name": "Focus Field",
-  "version": "1.0.0",
-  "description": "Block distracting sites and run Pomodoro focus sessions. Stay in the field — indigo calm for deep work.",
+  "version": "1.1.1",
+  "description": "Stay focused: block distracting sites during Pomodoro sessions (or always-on). Optional local webcam timelapse of your focus block. Settings stay on your device.",
+  "homepage_url": "https://ayaanrustagi.github.io/focus-field/",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -22,7 +23,14 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "alarms", "tabs", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "windows",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
   "host_permissions": ["<all_urls>"],
   "declarative_net_request": {
     "rule_resources": [
@@ -35,7 +43,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["content/blocked.html"],
+      "resources": ["content/blocked.html", "timelapse/*"],
       "matches": ["<all_urls>"]
     }
   ]

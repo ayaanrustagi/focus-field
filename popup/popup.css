@@ -93,3 +93,29 @@ h1 {
   color: var(--soft);
 }
 .meta strong { color: var(--indigo); }
+
+.timelapse-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.timelapse-card .toggle { margin-bottom: 8px; }
+.timelapse-help {
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--soft);
+  margin-bottom: 10px;
+}
+.field--compact { margin-bottom: 8px; }
+.field--compact input {
+  max-width: 100%;
+}
+.btn.full {
+  width: 100%;
+  margin-top: 2px;
+}
+.btn.ghost.full {
+  background: var(--paper);
+}

@@ -34,9 +34,24 @@
       <span>always block list (even off-timer)</span>
     </label>
 
+    <div class="timelapse-card">
+      <label class="toggle">
+        <input type="checkbox" id="timelapse" />
+        <span>record webcam timelapse</span>
+      </label>
+      <p class="timelapse-help">
+        Opens a small window and snaps a frame every few seconds during focus, then stitches a short WebM when you finish.
+      </p>
+      <label class="field field--compact">
+        <span>frame every (sec)</span>
+        <input type="number" id="timelapse-interval" min="1" max="30" value="2" />
+      </label>
+      <button type="button" id="open-timelapse" class="btn ghost full">open timelapse window</button>
+    </div>
+
     <label class="field">
       <span>blocked sites</span>
-      <textarea id="list" rows="6" placeholder="reddit.com"></textarea>
+      <textarea id="list" rows="5" placeholder="reddit.com"></textarea>
     </label>
 
     <p class="meta">Sessions completed: <strong id="done">0</strong></p>

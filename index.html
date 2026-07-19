@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus Field — Website Blocker &amp; Pomodoro Timer for Chrome</title>
+  <meta name="description" content="Free website blocker Chrome extension with Pomodoro focus mode. Block YouTube, Twitter/X, Reddit, and any site you list during deep work. Always-on option. Optional local webcam timelapse. No account.">
+  <meta name="theme-color" content="#4338ca">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Focus Field">
+  <meta name="google-site-verification" content="Ziby-jkK6wZeBmDCvlC-Wc3sF0-6bwfgrkicRXNImuY" />
+  <link rel="canonical" href="https://ayaanrustagi.github.io/focus-field/">
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Focus Field">
+  <meta property="og:title" content="Focus Field — Website Blocker & Pomodoro for Chrome">
+  <meta property="og:description" content="Block distracting websites during Pomodoro sessions or always-on. Free focus mode extension. Local-first.">
+  <meta property="og:url" content="https://ayaanrustagi.github.io/focus-field/">
+  <meta property="og:image" content="https://ayaanrustagi.github.io/focus-field/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Focus Field — stay in the field">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Focus Field — Site Blocker & Pomodoro">
+  <meta name="twitter:description" content="Block distracting sites during focus. Free Manifest V3 Chrome extension.">
+  <meta name="twitter:image" content="https://ayaanrustagi.github.io/focus-field/og.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Focus Field",
+        "url": "https://ayaanrustagi.github.io/focus-field/",
+        "description": "Website blocker and Pomodoro focus mode Chrome extension."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Focus Field",
+        "applicationCategory": "BrowserApplication",
+        "applicationSubCategory": "Productivity website blocker",
+        "operatingSystem": "Chrome, Edge, Brave, Arc",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Block distracting websites during Pomodoro focus sessions or with always-on mode. Optional local webcam timelapse. Free Manifest V3 Chrome extension.",
+        "url": "https://ayaanrustagi.github.io/focus-field/",
+        "image": "https://ayaanrustagi.github.io/focus-field/og.png",
+        "featureList": [
+          "Website blocker Chrome extension",
+          "Pomodoro focus timer",
+          "Always-on site blocking",
+          "Custom blocklist",
+          "Optional local webcam timelapse"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Focus Field block websites?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sites you add to your blocklist redirect to a calm Focus Field page while a focus session runs, or whenever always-on is enabled." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a Pomodoro timer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Set focus and break minutes, start a session, and the badge shows time remaining." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Focus Field upload my data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Blocklists, timers, and optional webcam frames stay on your device. There is no Focus Field server for your settings or video." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">[Menu]</button>
+  </header>
+  <nav class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" id="closeBtn">[Close]</button>
+    <a href="#top">Home</a>
+    <a href="#marks">Marks</a>
+    <a href="#how">How</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#install">Install</a>
+    <a href="privacy.html">Policy</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <svg class="doodle doodle--tl" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M30 8 L30 52 M12 18 L48 42 M48 18 L12 42 M8 30 L52 30"/></svg>
+      <svg class="doodle doodle--tr" viewBox="0 0 80 60" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 44 Q26 8 54 16 Q72 22 70 34"/><path d="M62 26 L70 34 L58 38"/></svg>
+      <div class="hero__lockup hero-reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#eef2ff" stroke="#1e1b4b" stroke-width="1.4"/><rect x="5" y="6" width="14" height="3.4" rx="1" fill="#1e1b4b"/><rect x="5" y="12" width="14" height="2.6" rx="1" fill="#4338ca"/></svg>
+        <span class="name">focus field</span>
+      </div>
+      <h1 class="serif hero__title hero-reveal">Stay in the <em>field</em>.</h1>
+      <p class="hero__sub hero-reveal">Free website blocker for Chrome with Pomodoro focus mode. Block YouTube, X, Reddit, or any site you list — during a session or always-on. Local-first. No account.</p>
+      <span class="tag tag--clay hero__scroll hero-reveal">Scroll</span>
+    </section>
+
+    <section class="collage" aria-label="Focus Field marks">
+      <div class="collage__inner">
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>twitter.com</span><span class="mark">blocked</span></div>
+          <p class="mock-post__body">Focus session live — this host hits the interstitial.</p>
+          <figcaption class="frame__caption">Fig. 01 — block</figcaption>
+        </figure>
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>timer</span><span class="mark">25:00</span></div>
+          <p class="mock-post__body">Deep work timer running. Break unlocks after focus ends.</p>
+          <figcaption class="frame__caption">Fig. 02 — pomodoro</figcaption>
+        </figure>
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>always-on</span><span class="mark">on</span></div>
+          <p class="mock-post__body">Blocklist active even between Pomodoros.</p>
+          <figcaption class="frame__caption">Fig. 03 — always-on</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="statement">
+      <div class="wrap">
+        <span class="tag tag--clay tag--center" style="margin-bottom:30px">Willpower is a bad system</span>
+        <p class="serif statement__text js-words">Block the sites. Start the timer. Leave the rest outside the field.</p>
+      </div>
+    </section>
+
+    <section class="ledger">
+      <div class="wrap">
+        <div class="ledger__grid">
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="25">0</span><span class="ledger__l">min focus default</span></div>
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="5">0</span><span class="ledger__l">min break</span></div>
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="0">0</span><span class="ledger__l">doomscroll</span></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="marks">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">The three moves</span>
+          <h2 class="serif section__title reveal">Focus, block, repeat.</h2>
+        </div>
+        <div class="marks__grid">
+          <article class="mark-card reveal"><div class="frame"><span class="mark">focus</span><h3>Pomodoro core</h3><p>Start focus, earn the break, track completed sessions in the popup.</p></div></article>
+          <article class="mark-card reveal"><div class="frame"><span class="mark">block</span><h3>Hard redirects</h3><p>While focus (or always-on) is active, blocked hosts meet a soft interstitial.</p></div></article>
+          <article class="mark-card reveal"><div class="frame"><span class="mark">list</span><h3>Your blocklist</h3><p>X, Instagram, Reddit, YouTube… edit the list anytime. Local only.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">How it works</span>
+          <h2 class="serif section__title reveal">A simple cascade.</h2>
+        </div>
+        <div class="how__rows">
+          <div class="how__row reveal"><span class="how__k">[ 01 ]</span><div class="how__v"><strong>Start focus</strong><span>Timer runs; blocked hosts redirect to the Focus Field page.</span></div></div>
+          <div class="how__row reveal"><span class="how__k">[ 02 ]</span><div class="how__v"><strong>Break</strong><span>Focus ends → break phase. Then idle — or go again.</span></div></div>
+          <div class="how__row reveal"><span class="how__k">[ 03 ]</span><div class="how__v"><strong>Always-on</strong><span>Keep the blocklist active even between Pomodoros.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="privacy">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">Privacy</span>
+          <h2 class="serif section__title reveal">Local by default.</h2>
+        </div>
+        <div class="wrap--prose">
+          <p class="prose-col reveal">Focus Field keeps timers and blocklists in chrome.storage.local. No account. No Focus Field servers. Full <a href="privacy.html">privacy policy</a>.</p>
+          <ul class="claim-list reveal">
+            <li>No account required</li>
+            <li>Local session state</li>
+            <li>Always-on option</li>
+            <li>Calm blocked page</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="install" id="install">
+      <div class="wrap">
+        <h2 class="serif reveal">Deep work deserves a <em>fence</em>.</h2>
+        <p class="reveal">Free · Manifest V3 · No account. Chrome Web Store listing pending review — load unpacked until then.</p>
+        <a class="btn reveal" href="#install">Under Review</a>
+        <a class="btn reveal" href="privacy.html" style="margin-left:8px">Privacy policy</a>
+        <span class="status-note">[ chrome://extensions → Developer mode → Load unpacked → focus-field/ ]</span>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a href="privacy.html">[Privacy]</a>
+      <span>© Focus Field</span>
+      <span>Manifest V3 · Local-first</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="site.js" defer></script>
+</body>
+</html>

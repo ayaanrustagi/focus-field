@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Focus Field Website Blocker</title>
+  <meta name="description" content="Focus Field privacy policy: blocklists, Pomodoro timers, and optional webcam timelapse stay on your device. No servers, no account, no selling data.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ayaanrustagi.github.io/focus-field/privacy.html">
+  <meta name="theme-color" content="#4338ca">
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Privacy Policy — Focus Field">
+  <meta property="og:description" content="Local-first website blocker privacy details.">
+  <meta property="og:url" content="https://ayaanrustagi.github.io/focus-field/privacy.html">
+  <meta property="og:image" content="https://ayaanrustagi.github.io/focus-field/og.png">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <main class="page-hero" style="text-align:left;max-width:680px;margin:0 auto;padding:80px 24px">
+    <span class="tag tag--clay">Focus Field</span>
+    <h1 class="serif" style="font-size:clamp(36px,6vw,56px);margin:12px 0 8px">Privacy Policy</h1>
+    <p style="color:var(--ink-soft,#4338ca);margin-bottom:28px">Effective date: July 19, 2026</p>
+
+    <div class="prose-col" style="line-height:1.65">
+      <p><strong>Summary:</strong> Focus Field stores your settings on your device. Site blocking uses Chrome’s declarativeNetRequest on hosts <em>you</em> list. Optional webcam timelapse never uploads video. There is no Focus Field account or backend for your data.</p>
+
+      <h2 style="margin-top:28px;font-size:22px">Data on your device</h2>
+      <ul>
+        <li><strong>Blocklist</strong> — hostnames you choose to block</li>
+        <li><strong>Timer settings</strong> — focus/break minutes, always-on flag, phase, session counts</li>
+        <li><strong>Timelapse prefs</strong> — whether recording is enabled, frame interval, window id</li>
+      </ul>
+      <p>Stored via <code>chrome.storage.local</code>.</p>
+
+      <h2 style="margin-top:28px;font-size:22px">Site blocking</h2>
+      <p>While a focus session is active or always-on is enabled, Focus Field installs dynamic declarativeNetRequest rules that redirect matching navigations to an in-extension blocked page. Rules are derived only from your list. When idle (and always-on is off), those rules are removed.</p>
+
+      <h2 style="margin-top:28px;font-size:22px">Webcam timelapse (optional)</h2>
+      <ul>
+        <li>Runs only if you enable it and start a focus session</li>
+        <li>Camera permission is requested in the timelapse window you open</li>
+        <li>Frames are processed in that page in memory; export is a local WebM download</li>
+        <li>Closing the window stops the camera</li>
+      </ul>
+
+      <h2 style="margin-top:28px;font-size:22px">Permissions</h2>
+      <ul>
+        <li><strong>storage</strong> — settings</li>
+        <li><strong>alarms</strong> — timer ticks</li>
+        <li><strong>tabs / windows</strong> — badge and timelapse window</li>
+        <li><strong>declarativeNetRequest</strong> (+ host access) — block user-listed sites on any host the user may add</li>
+      </ul>
+
+      <h2 style="margin-top:28px;font-size:22px">What we don’t do</h2>
+      <ul>
+        <li>No Focus Field cloud for blocklists or video</li>
+        <li>No selling data</li>
+        <li>No ad SDKs in the extension</li>
+      </ul>
+
+      <h2 style="margin-top:28px;font-size:22px">Website</h2>
+      <p>Static marketing pages may be hosted on GitHub Pages; the host may log standard HTTP requests. That is separate from extension storage.</p>
+
+      <h2 style="margin-top:28px;font-size:22px">Changes</h2>
+      <p>Policy updates will change the effective date above.</p>
+
+      <p style="margin-top:32px"><a class="btn" href="index.html">← Back to Focus Field</a></p>
+    </div>
+  </main>
+</body>
+</html>

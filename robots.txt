@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayaanrustagi.github.io/focus-field/sitemap.xml

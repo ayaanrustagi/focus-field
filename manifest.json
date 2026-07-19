@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Field — Site Blocker & Pomodoro",
+  "short_name": "Focus Field",
+  "version": "1.0.0",
+  "description": "Block distracting sites and run Pomodoro focus sessions. Stay in the field — indigo calm for deep work.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Focus Field",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "alarms", "tabs", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["<all_urls>"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "focus_block_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content/blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

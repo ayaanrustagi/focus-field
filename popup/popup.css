@@ -1,0 +1,95 @@
+:root {
+  --indigo: #4338ca;
+  --deep: #312e81;
+  --paper: #eef2ff;
+  --line: #c7d2fe;
+  --ink: #1e1b4b;
+  --soft: #6366f1;
+  --white: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: 320px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+}
+.app { padding: 18px 16px 16px; }
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 4px 0 6px;
+}
+.timer {
+  font-size: 40px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  color: var(--indigo);
+  margin-bottom: 14px;
+}
+.row { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 8px; margin-bottom: 14px; }
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+}
+.btn.solid { background: var(--indigo); color: white; }
+.btn.solid:hover { background: var(--deep); }
+.btn.ghost {
+  background: white;
+  color: var(--indigo);
+  border: 1px solid var(--line);
+}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--soft);
+  margin-bottom: 10px;
+}
+.field input, .field textarea {
+  font: inherit;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  resize: vertical;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--soft);
+}
+.meta strong { color: var(--indigo); }

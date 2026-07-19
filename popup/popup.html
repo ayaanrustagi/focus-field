@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Focus Field</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <p class="eyebrow">focus field</p>
+      <h1 id="phase-title">Ready</h1>
+      <p class="timer" id="timer">25:00</p>
+    </header>
+
+    <div class="row">
+      <button type="button" id="start" class="btn solid">start focus</button>
+      <button type="button" id="stop" class="btn ghost">stop</button>
+    </div>
+
+    <div class="grid">
+      <label class="field">
+        <span>focus (min)</span>
+        <input type="number" id="focus-min" min="1" max="120" />
+      </label>
+      <label class="field">
+        <span>break (min)</span>
+        <input type="number" id="break-min" min="1" max="60" />
+      </label>
+    </div>
+
+    <label class="toggle">
+      <input type="checkbox" id="always" />
+      <span>always block list (even off-timer)</span>
+    </label>
+
+    <label class="field">
+      <span>blocked sites</span>
+      <textarea id="list" rows="6" placeholder="reddit.com"></textarea>
+    </label>
+
+    <p class="meta">Sessions completed: <strong id="done">0</strong></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

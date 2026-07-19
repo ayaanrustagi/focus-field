@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus Field — Site Blocker & Pomodoro for Chrome</title>
+  <meta name="description" content="Block distracting sites and run Pomodoro sessions. Indigo calm for deep work — free Chrome focus extension.">
+  <meta name="theme-color" content="#4338ca">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <meta property="og:title" content="Focus Field — Site Blocker & Pomodoro">
+  <meta property="og:description" content="Stay in the field. Block noise. Run real Pomodoros.">
+  <meta property="og:image" content="og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Focus Field","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Site blocker and Pomodoro timer for Chrome."}</script>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">[Menu]</button>
+  </header>
+  <nav class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" id="closeBtn">[Close]</button>
+    <a href="#top">Home</a>
+    <a href="#marks">Marks</a>
+    <a href="#how">How</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#install">Install</a>
+    <a href="privacy.html">Policy</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <svg class="doodle doodle--tl" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M30 8 L30 52 M12 18 L48 42 M48 18 L12 42 M8 30 L52 30"/></svg>
+      <svg class="doodle doodle--tr" viewBox="0 0 80 60" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 44 Q26 8 54 16 Q72 22 70 34"/><path d="M62 26 L70 34 L58 38"/></svg>
+      <div class="hero__lockup hero-reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#eef2ff" stroke="#1e1b4b" stroke-width="1.4"/><rect x="5" y="6" width="14" height="3.4" rx="1" fill="#1e1b4b"/><rect x="5" y="12" width="14" height="2.6" rx="1" fill="#4338ca"/></svg>
+        <span class="name">focus field</span>
+      </div>
+      <h1 class="serif hero__title hero-reveal">Stay in the <em>field</em>.</h1>
+      <p class="hero__sub hero-reveal">Block the noise. Run real Pomodoros. When focus is on, distractors don't load — they meet a calm interstitial.</p>
+      <span class="tag tag--clay hero__scroll hero-reveal">Scroll</span>
+    </section>
+
+    <section class="collage" aria-label="Focus Field marks">
+      <div class="collage__inner">
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>twitter.com</span><span class="mark">blocked</span></div>
+          <p class="mock-post__body">Focus session live — this host hits the interstitial.</p>
+          <figcaption class="frame__caption">Fig. 01 — block</figcaption>
+        </figure>
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>timer</span><span class="mark">25:00</span></div>
+          <p class="mock-post__body">Deep work timer running. Break unlocks after focus ends.</p>
+          <figcaption class="frame__caption">Fig. 02 — pomodoro</figcaption>
+        </figure>
+        <figure class="frame collage-item">
+          <div class="mock-post__top"><span>always-on</span><span class="mark">on</span></div>
+          <p class="mock-post__body">Blocklist active even between Pomodoros.</p>
+          <figcaption class="frame__caption">Fig. 03 — always-on</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="statement">
+      <div class="wrap">
+        <span class="tag tag--clay tag--center" style="margin-bottom:30px">Willpower is a bad system</span>
+        <p class="serif statement__text js-words">Block the sites. Start the timer. Leave the rest outside the field.</p>
+      </div>
+    </section>
+
+    <section class="ledger">
+      <div class="wrap">
+        <div class="ledger__grid">
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="25">0</span><span class="ledger__l">min focus default</span></div>
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="5">0</span><span class="ledger__l">min break</span></div>
+          <div class="ledger__cell reveal"><span class="ledger__n serif" data-count="0">0</span><span class="ledger__l">doomscroll</span></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="marks">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">The three moves</span>
+          <h2 class="serif section__title reveal">Focus, block, repeat.</h2>
+        </div>
+        <div class="marks__grid">
+          <article class="mark-card reveal"><div class="frame"><span class="mark">focus</span><h3>Pomodoro core</h3><p>Start focus, earn the break, track completed sessions in the popup.</p></div></article>
+          <article class="mark-card reveal"><div class="frame"><span class="mark">block</span><h3>Hard redirects</h3><p>While focus (or always-on) is active, blocked hosts meet a soft interstitial.</p></div></article>
+          <article class="mark-card reveal"><div class="frame"><span class="mark">list</span><h3>Your blocklist</h3><p>X, Instagram, Reddit, YouTube… edit the list anytime. Local only.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">How it works</span>
+          <h2 class="serif section__title reveal">A simple cascade.</h2>
+        </div>
+        <div class="how__rows">
+          <div class="how__row reveal"><span class="how__k">[ 01 ]</span><div class="how__v"><strong>Start focus</strong><span>Timer runs; blocked hosts redirect to the Focus Field page.</span></div></div>
+          <div class="how__row reveal"><span class="how__k">[ 02 ]</span><div class="how__v"><strong>Break</strong><span>Focus ends → break phase. Then idle — or go again.</span></div></div>
+          <div class="how__row reveal"><span class="how__k">[ 03 ]</span><div class="how__v"><strong>Always-on</strong><span>Keep the blocklist active even between Pomodoros.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="section" id="privacy">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="tag tag--clay">Privacy</span>
+          <h2 class="serif section__title reveal">Local by default.</h2>
+        </div>
+        <div class="wrap--prose">
+          <p class="prose-col reveal">Focus Field keeps timers and blocklists in chrome.storage.local. No account. No Focus Field servers. Full <a href="privacy.html">privacy policy</a>.</p>
+          <ul class="claim-list reveal">
+            <li>No account required</li>
+            <li>Local session state</li>
+            <li>Always-on option</li>
+            <li>Calm blocked page</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+    <section class="install" id="install">
+      <div class="wrap">
+        <h2 class="serif reveal">Deep work deserves a <em>fence</em>.</h2>
+        <p class="reveal">Free Chrome extension. Load unpacked from focus-field/.</p>
+        <a class="btn reveal" href="../">Under Review</a>
+        <span class="status-note">[ chrome://extensions → Load unpacked → focus-field/ ]</span>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a href="privacy.html">[Privacy]</a>
+      <span>© Focus Field</span>
+      <span>Manifest V3 · Local-first</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="site.js" defer></script>
+</body>
+</html>

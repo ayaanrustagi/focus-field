@@ -3,24 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Focus Field — Block Distracting Sites &amp; Pomodoro for Chrome</title>
-  <meta name="description" content="Stay focused in Chrome: block sites you choose during Pomodoro sessions or always-on. Optional local webcam timelapse. Free, no account, settings stay on your device.">
-  <meta name="keywords" content="site blocker chrome, pomodoro extension, focus mode, block youtube twitter, deep work">
+  <title>Focus Field — Website Blocker &amp; Pomodoro Timer for Chrome</title>
+  <meta name="description" content="Free website blocker Chrome extension with Pomodoro focus mode. Block YouTube, Twitter/X, Reddit, and any site you list during deep work. Always-on option. Optional local webcam timelapse. No account.">
   <meta name="theme-color" content="#4338ca">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Focus Field">
   <link rel="canonical" href="https://ayaanrustagi.github.io/focus-field/">
   <link rel="icon" type="image/png" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Focus Field — Block Distracted Browsing">
-  <meta property="og:description" content="Block noise. Run real Pomodoros. Optional local timelapse. Local-first.">
+  <meta property="og:site_name" content="Focus Field">
+  <meta property="og:title" content="Focus Field — Website Blocker & Pomodoro for Chrome">
+  <meta property="og:description" content="Block distracting websites during Pomodoro sessions or always-on. Free focus mode extension. Local-first.">
   <meta property="og:url" content="https://ayaanrustagi.github.io/focus-field/">
   <meta property="og:image" content="https://ayaanrustagi.github.io/focus-field/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Focus Field — stay in the field">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Focus Field — Chrome Focus Extension">
-  <meta name="twitter:description" content="Block distracting sites during focus. Free Manifest V3 extension.">
+  <meta name="twitter:title" content="Focus Field — Site Blocker & Pomodoro">
+  <meta name="twitter:description" content="Block distracting sites during focus. Free Manifest V3 Chrome extension.">
   <meta name="twitter:image" content="https://ayaanrustagi.github.io/focus-field/og.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Focus Field","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Block distracting sites during Pomodoro focus sessions. Optional local webcam timelapse. Local-first.","url":"https://ayaanrustagi.github.io/focus-field/","image":"https://ayaanrustagi.github.io/focus-field/og.png"}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Focus Field",
+        "url": "https://ayaanrustagi.github.io/focus-field/",
+        "description": "Website blocker and Pomodoro focus mode Chrome extension."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Focus Field",
+        "applicationCategory": "BrowserApplication",
+        "applicationSubCategory": "Productivity website blocker",
+        "operatingSystem": "Chrome, Edge, Brave, Arc",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Block distracting websites during Pomodoro focus sessions or with always-on mode. Optional local webcam timelapse. Free Manifest V3 Chrome extension.",
+        "url": "https://ayaanrustagi.github.io/focus-field/",
+        "image": "https://ayaanrustagi.github.io/focus-field/og.png",
+        "featureList": [
+          "Website blocker Chrome extension",
+          "Pomodoro focus timer",
+          "Always-on site blocking",
+          "Custom blocklist",
+          "Optional local webcam timelapse"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Focus Field block websites?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sites you add to your blocklist redirect to a calm Focus Field page while a focus session runs, or whenever always-on is enabled." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a Pomodoro timer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Set focus and break minutes, start a session, and the badge shows time remaining." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Focus Field upload my data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Blocklists, timers, and optional webcam frames stay on your device. There is no Focus Field server for your settings or video." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -46,7 +101,7 @@
         <span class="name">focus field</span>
       </div>
       <h1 class="serif hero__title hero-reveal">Stay in the <em>field</em>.</h1>
-      <p class="hero__sub hero-reveal">Block the noise. Run real Pomodoros. When focus is on, distractors don't load — they meet a calm interstitial.</p>
+      <p class="hero__sub hero-reveal">Free website blocker for Chrome with Pomodoro focus mode. Block YouTube, X, Reddit, or any site you list — during a session or always-on. Local-first. No account.</p>
       <span class="tag tag--clay hero__scroll hero-reveal">Scroll</span>
     </section>
 
